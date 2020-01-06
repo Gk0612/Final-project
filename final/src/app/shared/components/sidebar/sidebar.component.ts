@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sidebar',
+  selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent {
+export class SidebarComponent implements OnInit {
 
+  constructor() { }
 
-  _opened: boolean = true;
+  ngOnInit() {
+  }
 
-
-  _toggleOpened() {
-  this._opened = !this._opened;
-}
 }
