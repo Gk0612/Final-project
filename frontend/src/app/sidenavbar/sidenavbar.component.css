@@ -3,11 +3,15 @@
 }
 
 .sidenav {
-  width: 200px;
-  box-shadow: 3px 0 6px rgba(0, 0,0,.24);
+  width: 225px;
+  box-shadow: 3px 0 6px rgba(0, 0,0,1);
+  /* background-image: url(../../assets/agriculture-backyard-blur-close-up.jpeg);
+  background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover */
 }
 
-.sidenav .mat-toolbar {
+/* .sidenav .mat-toolbar {
   background: inherit;
 }
 
@@ -15,4 +19,21 @@
   position: sticky;
   top: 0;
   z-index: 1;
+} */
+
+.name{
+  
+  color: darkred;
+}
+
+.expansion{
+  background-image:url(../../assets/barley.webp);
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.title{
+  color:#2B2B52;
+  text-decoration: double;
 }

@@ -5,7 +5,6 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IncomeComponent } from './income/income.component';
-import { TablesComponent } from './tables/tables.component';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,20 +16,28 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {RouterModule,Routes} from '@angular/router';
+import { ExpenseComponent } from './expense/expense.component';
+import { HomeComponent } from './home/home.component';
+import { ContentpageComponent } from './contentpage/contentpage.component';
 
 const routes:Routes = [
-  {  path:'' , component:IncomeComponent},
+  {  path:'' , component:HomeComponent},
+  {  path:'login', component:LoginComponent},
+  {  path:'income' , component:IncomeComponent},
   {  path:'side' , component:SidenavbarComponent},
- 
+  {  path:'expense' , component:ExpenseComponent},
+  {  path:'main' , component:ContentpageComponent},
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     IncomeComponent,
-    TablesComponent,
     LoginComponent,
-    SidenavbarComponent
+    SidenavbarComponent,
+    ExpenseComponent,
+    HomeComponent,
+    ContentpageComponent
   ],
   imports: [
     BrowserModule,

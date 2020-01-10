@@ -1,7 +1,7 @@
 <form #f="ngForm" (ngSubmit)="submit(f)">
-  <div class="col-sm-8 row mb-3">
-<div class="form-group row ">
-  <label for="customerName" class="col-sm-2 col-form-label">Customer Name:</label>
+  <div class="col-sm-8">
+<div class="form-group row" style="padding:10px;">
+  <label for="customerName" class="col-sm-2 ">Customer Name:</label>
   <div class="col-sm-6">
   <input
     required
@@ -117,7 +117,7 @@
     name="amount"
     #amount="ngModel"
     id="amount"
-    type="number">
+    type="number"><div *ngIf="!amount.value">{{numberOfAcres.value * costPerAcre.value}}</div>
     <div
     class="alert alert-danger"
     *ngIf="amount.touched && !amount.valid">
@@ -151,7 +151,7 @@
     name="balance"
     #balance="ngModel"
     id="balance"
-    type="number">
+    type="number"><div *ngIf="!balance.value">{{amount.value - advance.value}}</div>
     <div
     class="alert alert-danger"
     *ngIf="balance.touched && !balance.valid">
@@ -178,6 +178,7 @@
 
     </div> </div></div>
 
+    
     <div class="form-group col-sm-2">
     <button class="btn btn-primary" >Save</button>
     </div>

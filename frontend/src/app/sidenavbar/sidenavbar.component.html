@@ -1,57 +1,54 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
+<mat-sidenav-container class="sidenav-container" >
+  <mat-sidenav #drawer class="sidenav" fixedInViewport 
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>
-      <span color="primary">Mean</span>
+      <span class="name">Menu</span>
     </mat-toolbar>
   
   
-  <mat-expansion-panel>
+  <mat-expansion-panel class="expansion">
     <mat-expansion-panel-header>
-      <mat-panel-title>
+      <mat-panel-title class="title">
         Rice Transplanter
       </mat-panel-title>   
     </mat-expansion-panel-header>
-
     <hr>
-    <a routerLink="" >Income</a><br><hr>
-    <a routerLink="" >Expense</a><br><hr>
-    <a routerLink="" >All Details</a><br><hr>
+    <a routerLink="/income" >Income</a><hr>
+    <a routerLink="/expense" >Expense</a><hr>
+    <a routerLink="" >All Details</a><hr>
     <a routerLink="" >Customer Details</a>
   </mat-expansion-panel>
 
-  <mat-expansion-panel>
+  <mat-expansion-panel class="expansion">
     <mat-expansion-panel-header>
-      <mat-panel-title>
+      <mat-panel-title class="title">
         Baler
       </mat-panel-title>
     </mat-expansion-panel-header>
-   
-    <a routerLink="IncomeComponent" >Income</a><br><hr>
-    <a routerLink="" >Expense</a><br><hr>
-    <a routerLink="" >All Details</a><br><hr>
+   <hr>
+    <a routerLink="/income" >Income</a><hr>
+    <a routerLink="/expense" >Expense</a><hr>
+    <a routerLink="" >All Details</a><hr>
     <a routerLink="" >Customer Details</a>
   </mat-expansion-panel>
 
-  <mat-expansion-panel>
+  <mat-expansion-panel class="expansion">
     <mat-expansion-panel-header>
-      <mat-panel-title>
-        Sugar Harvester
+      <mat-panel-title class="title">
+        Sugar  cane Harvester
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <a routerLink="" >Income</a><br><hr>
-    <a routerLink="" >Expense</a><br><hr>
-    <a routerLink="" >All Details</a><br><hr>
+    <hr>
+    <a routerLink="/income" >Income</a><hr>
+    <a routerLink="/expense" >Expense</a><hr>
+    <a routerLink="" >All Details</a><hr>
     <a routerLink="" >Customer Details</a>
   </mat-expansion-panel>
      
-    
-
-
   </mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav-content class="content">
    
     <!-- Add Content Here -->
   </mat-sidenav-content>
