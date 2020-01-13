@@ -1,10 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import { NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { IncomeComponent } from './income/income.component';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,28 +15,53 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {RouterModule,Routes} from '@angular/router';
-import { ExpenseComponent } from './expense/expense.component';
 import { HomeComponent } from './home/home.component';
-import { ContentpageComponent } from './contentpage/contentpage.component';
+import { RiceIncomeComponent } from './Rice-Plant/rice-income/rice-income.component';
+import { BalerIncomeComponent } from './Baler/baler-income/baler-income.component';
+import { RiceExpenseComponent } from './Rice-Plant/rice-expense/rice-expense.component';
+import { BalerExpenseComponent } from './Baler/baler-expense/baler-expense.component';
+import { RiceProfitComponent } from './Rice-Plant/rice-profit/rice-profit.component';
+import { BalerProfitComponent } from './Baler/baler-profit/baler-profit.component';
+import { RiceBalanceComponent } from './Rice-Plant/rice-balance/rice-balance.component';
+import { BalerBalanceComponent } from './Baler/baler-balance/baler-balance.component';
+import { SugarBalanceComponent } from './Sugarcane/sugar-balance/sugar-balance.component';
+import { SugarIncomeComponent } from './Sugarcane/sugar-income/sugar-income.component';
+import { SugarExpenseComponent } from './Sugarcane/sugar-expense/sugar-expense.component';
+import { SugarProfitComponent } from './Sugarcane/sugar-profit/sugar-profit.component';
+
 
 const routes:Routes = [
   {  path:'' , component:HomeComponent},
   {  path:'login', component:LoginComponent},
-  {  path:'income' , component:IncomeComponent},
-  {  path:'side' , component:SidenavbarComponent},
-  {  path:'expense' , component:ExpenseComponent},
-  {  path:'main' , component:ContentpageComponent},
+  {  path:'riceincome' , component:RiceIncomeComponent},
+  {  path:'riceexpense' , component:RiceExpenseComponent},
+  {  path:'riceprofit' , component:RiceProfitComponent},
+  {  path:'sugarincome' , component:SugarIncomeComponent},
+  {  path:'sugarexpense' , component:SugarExpenseComponent},
+  {  path:'balerincome' , component:BalerIncomeComponent},
+  {  path:'balerexpense' , component:BalerExpenseComponent},
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    IncomeComponent,
+    
     LoginComponent,
     SidenavbarComponent,
-    ExpenseComponent,
     HomeComponent,
-    ContentpageComponent
+    RiceIncomeComponent,
+    BalerIncomeComponent,
+    RiceExpenseComponent,
+    BalerExpenseComponent,
+    RiceProfitComponent,
+    BalerProfitComponent,
+    RiceBalanceComponent,
+    BalerBalanceComponent,
+    SugarBalanceComponent,
+    SugarIncomeComponent,
+    SugarExpenseComponent,
+    SugarProfitComponent,
+   
   ],
   imports: [
     BrowserModule,

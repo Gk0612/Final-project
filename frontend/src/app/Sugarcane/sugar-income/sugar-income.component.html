@@ -1,0 +1,193 @@
+<form #f="ngForm">
+    <div class="col-sm-8">
+  <div class="form-group row" >
+    <label for="date" class="col-sm-2 ">Date:</label>
+    <div class="col-sm-6">
+    <input
+      required
+      class="form-control"
+      ngModel
+      name="date"
+      #date="ngModel"
+      id="date"
+      type="date">
+      <div
+      class="alert alert-danger"
+      *ngIf="date.touched && !date.valid">
+      Date is Required
+       </div></div>
+      </div>
+
+      <div class="form-group row" >
+        <label for="customerName" class="col-sm-2 ">Customer Name:</label>
+        <div class="col-sm-6">
+        <input
+          required
+          class="form-control"
+          ngModel
+          name="customerName"
+          #customerName="ngModel"
+          id="customerName"
+          type="text">
+          <div
+          class="alert alert-danger"
+          *ngIf="customerName.touched && !customerName.valid">
+          Customer Name is Required
+           </div></div>
+          </div>
+
+          <div class="form-group row" >
+            <label for="customerPlace" class="col-sm-2 ">Customer Place:</label>
+            <div class="col-sm-6">
+            <input
+              required
+              class="form-control"
+              ngModel
+              name="customerPlace"
+              #customerPlace="ngModel"
+              id="customerPlace"
+              type="text">
+              <div
+              class="alert alert-danger"
+              *ngIf="customerPlace.touched && !customerPlace.valid">
+              Customer Place is Required
+               </div></div>
+              </div>
+
+              <div class="form-group row" >
+                <label for="ryotNumber" class="col-sm-2 ">Ryot Number:</label>
+                <div class="col-sm-6">
+                <input
+                  required
+                  class="form-control"
+                  ngModel
+                  name="ryotNumber"
+                  #ryotNumber="ngModel"
+                  id="ryotNumber"
+                  type="text">
+                  <div
+                  class="alert alert-danger"
+                  *ngIf="ryotNumber.touched && !ryotNumber.valid">
+                  Ryot Number is Required
+                   </div></div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="plotNumber" class="col-sm-2 ">Plot Number:</label>
+                    <div class="col-sm-6">
+                    <input
+                      required
+                      class="form-control"
+                      ngModel
+                      name="plotNumber"
+                      #plotNumber="ngModel"
+                      id="plotNumber"
+                      type="text">
+                      <div
+                      class="alert alert-danger"
+                      *ngIf="plotNumber.touched && !plotNumber.valid">
+                      Plot Number is Required
+                       </div></div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="costPerTon" class="col-sm-2 ">Cost Per Ton:</label>
+                        <div class="col-sm-6">
+                        <input
+                        required
+                        class="form-control"
+                        ngModel
+                        name="costPerTon"
+                        #costPerTon="ngModel"
+                        id="costPerTon"
+                        type="number">
+                        <div
+                        class="alert alert-danger"
+                        *ngIf="costPerTon.touched && !costPerTon.valid">
+                        Cost Per Ton is Required
+                        </div></div></div>
+
+                        <div class="form-group row">
+                            <label for="numberOfTons" class="col-sm-2 col-form-label">Number of Tons:</label>
+                            <div class="col-sm-6">
+                            <input
+                            required
+                            class="form-control"
+                            ngModel
+                            name="numberOfTons"
+                            #numberOfTons="ngModel"
+                            id="numberOfTons"
+                            type="number">
+                            <div
+                            class="alert alert-danger"
+                            *ngIf="numberOfTons.touched && !numberOfTons.valid">
+                            Number of Tons is Required
+                            </div></div></div>
+
+                            <div class="form-group row">
+                                <label for="amount" class="col-sm-2 ">Amount</label>
+                                <div class="col-sm-6">
+                                <input
+                                required
+                                class="form-control"
+                                ngModel
+                                name="amount"
+                                #amount="ngModel"
+                                id="amount"
+                                type="number"><div *ngIf="!amount.value"></div>
+                                <div
+                                class="alert alert-danger"
+                                *ngIf="amount.touched && !amount.valid">
+                                 Amount is Required
+                                </div> </div> </div>
+
+                                <div class="form-group row">
+                                    <label for="advance" class="col-sm-2 col-form-label">Advance</label>
+                                    <div class="col-sm-6">
+                                    <input
+                                    required
+                                    class="form-control"
+                                    ngModel
+                                    name="advance"
+                                    #advance="ngModel"
+                                    id="advance"
+                                    type="number">
+                                    <div
+                                    class="alert alert-danger"
+                                    *ngIf="advance.touched && !advance.valid">
+                                      Advance is Required
+                                    </div></div> </div>
+
+                                    <div class="form-group row">
+                                        <label for="balance"class="col-sm-2 col-form-label">Balance</label>
+                                        <div class="col-sm-6">
+                                        <input
+                                        required
+                                        class="form-control"
+                                        ngModel
+                                        name="balance"
+                                        #balance="ngModel"
+                                        id="balance"
+                                        type="number"><div *ngIf="!balance.value">{{amount.value - advance.value}}</div>
+                                        <div
+                                        class="alert alert-danger"
+                                        *ngIf="balance.touched && !balance.valid">
+                                        Balance is Required
+                                        </div></div>
+                                      </div>
+
+                                      <div class="form-group col-sm-2">
+                                        <button class="btn btn-primary" >Save</button>
+                                        </div>
+                                        <div class="form-group col-sm-2">
+                                          <button class="btn btn-primary" >Details</button>
+                                        </div>
+                                        <div class="form-group col-sm-2">
+                                          <button class="btn btn-primary" >Edit</button>
+                                        </div>
+                                        <div class="form-group col">
+                                          <button class="btn btn-primary" >Delete</button>
+                                        </div>
+                                    
+                
+    </div></form>

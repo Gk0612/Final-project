@@ -1,0 +1,7 @@
+.bg-image{
+    background-image:url(../../../assets/Rice.jpg); 
+     background-attachment:fixed;
+     background-repeat: no-repeat;
+     background-size: cover;
+     
+ }

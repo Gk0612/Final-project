@@ -27,7 +27,7 @@
 }
 
 .expansion{
-  background-image:url(../../assets/barley.webp);
+   background-image:url(../../assets/barley.webp); 
     background-attachment:fixed;
     background-repeat: no-repeat;
     background-size: cover;

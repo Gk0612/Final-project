@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContentpageComponent } from './contentpage.component';
+import { RiceProfitComponent } from './rice-profit.component';
 
-describe('ContentpageComponent', () => {
-  let component: ContentpageComponent;
-  let fixture: ComponentFixture<ContentpageComponent>;
+describe('RiceProfitComponent', () => {
+  let component: RiceProfitComponent;
+  let fixture: ComponentFixture<RiceProfitComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContentpageComponent ]
+      declarations: [ RiceProfitComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ContentpageComponent);
+    fixture = TestBed.createComponent(RiceProfitComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
