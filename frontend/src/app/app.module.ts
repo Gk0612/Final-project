@@ -1,7 +1,10 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatTreeModule} from '@angular/material/tree';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
@@ -28,6 +31,8 @@ import { SugarBalanceComponent } from './Sugarcane/sugar-balance/sugar-balance.c
 import { SugarIncomeComponent } from './Sugarcane/sugar-income/sugar-income.component';
 import { SugarExpenseComponent } from './Sugarcane/sugar-expense/sugar-expense.component';
 import { SugarProfitComponent } from './Sugarcane/sugar-profit/sugar-profit.component';
+import { RiceDetailsComponent } from './Rice-Plant/rice-details/rice-details.component'
+import {RicePlantService} from './rice-plant.service';
 
 
 const routes:Routes = [
@@ -35,7 +40,9 @@ const routes:Routes = [
   {  path:'login', component:LoginComponent},
   {  path:'riceincome' , component:RiceIncomeComponent},
   {  path:'riceexpense' , component:RiceExpenseComponent},
+  {  path:'ricebalance' , component:RiceBalanceComponent},
   {  path:'riceprofit' , component:RiceProfitComponent},
+  { path:'ricedetails',component:RiceDetailsComponent},
   {  path:'sugarincome' , component:SugarIncomeComponent},
   {  path:'sugarexpense' , component:SugarExpenseComponent},
   {  path:'balerincome' , component:BalerIncomeComponent},
@@ -45,7 +52,6 @@ const routes:Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    
     LoginComponent,
     SidenavbarComponent,
     HomeComponent,
@@ -61,12 +67,15 @@ const routes:Routes = [
     SugarIncomeComponent,
     SugarExpenseComponent,
     SugarProfitComponent,
+    RiceDetailsComponent,
    
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     MatSidenavModule,
+    MatTreeModule,
     CommonModule,
     MatExpansionModule,
     RouterModule.forRoot(routes),
@@ -78,7 +87,9 @@ const routes:Routes = [
     MatIconModule,
     MatListModule,
   ],
-  providers: [],
+  providers: [
+    RicePlantService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

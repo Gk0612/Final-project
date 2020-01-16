@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router'
+import { RicePlantService } from './../../rice-plant.service';
 
 @Component({
   selector: 'rice-expense',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RiceExpenseComponent implements OnInit {
 
-  constructor() { }
+  constructor(private incomeDetails:RicePlantService ,private router:Router) { }
 
   ngOnInit() {
   }
-
+  
+  addExpense(driverName,managerName,driverSalary,managerSalary,
+    date,petrol,diesel,service,spare,foodCost,totalAmount){
+      this.incomeDetails.addExpense(driverName,managerName,driverSalary,managerSalary,
+        date,petrol,diesel,service,spare,foodCost,totalAmount).subscribe(()=>{
+          
+        })
+}
 }

@@ -1,0 +1,85 @@
+
+<div class="container">
+    <h1>Details of full customers </h1>
+</div>
+<hr>
+<table class="table">
+    <thead>
+        <tr>
+            <!-- <th>Sl.No</th> -->
+            <th>Date</th>
+            <th>Customer Name</th>
+            <th>Customer Place</th>
+            <th>Bill Number</th>
+            <th>Number Of Acre</th>
+            <th>Cost per Acre</th>
+            <th>Total Amount</th>
+            <th>Advance</th>
+            <th>Balance</th>
+            <th>Amount Given</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let income of incomeDetails">
+        
+        <!-- <td>{{}}</td> -->
+            <td>{{income.date}}</td>
+            <td>{{income.customerName}}</td>
+            <td>{{income.customerPlace}}</td>
+            <td>{{income.billNumber}}</td>
+            <td>{{income.numberOfAcre}}</td>
+            <td>{{income.costPerAcre}}</td>
+            <td>{{income.totalAmount}}</td>
+            <td>{{income.advance}}</td>
+            <td>{{income.balance}}</td>
+            <td>{{income.amountGiven}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div class="container">
+    <h1>Details of full Expenses </h1>
+</div>
+<hr>
+<table class="table">
+    <thead>
+        <tr>
+            <!-- <th>Sl.No</th> -->
+            <th>Date</th>
+            <th>Driver Name</th>
+            <th>Manager Name</th>
+            <th>Driver Salary</th>
+            <th>Manager Salary</th>
+            <th>Petrol</th>
+            <th>Diesel</th>
+            <th>Service</th>
+            <th>Spare</th>
+            <th>Food Cost</th>
+            <th>Total Amount</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let expense of expenseDetails">
+        
+        <!-- <td>{{}}</td> -->
+            <td>{{expense.date}}</td>
+            <td>{{expense.driverName}}</td>
+            <td>{{expense.managerName}}</td>
+            <td>{{expense.driverSalary}}</td>
+            <td>{{expense.managerSalary}}</td>
+            <td>{{expense.petrol}}</td>
+            <td>{{expense.diesel}}</td>
+            <td>{{expense.service}}</td>
+            <td>{{expense.spare}}</td>
+            <td>{{expense.foodCost}}</td>
+            <td>{{expense.totalAmount}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+

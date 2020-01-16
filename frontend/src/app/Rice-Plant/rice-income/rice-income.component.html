@@ -1,95 +1,101 @@
- 
-<form #f="ngForm" class="bg-image">
-    <div class="col-sm-8" style="padding-top: 10px;">
-  <div class="form-group row" >
-    <label for="customerName" class="col-sm-2 ">Customer Name:</label>
-    <div class="col-sm-6">
-    <input
-      required
-      minlength="3"
-      maxlength="10"
-      class="form-control"
-      ngModel
-      name="customerName"
-      #customerName="ngModel"
-      id="customerName"
-      type="text">
-      <div
-      class="alert alert-danger"
-      *ngIf="customerName.touched && !customerName.valid">
-      Customer Name is Required
-       </div></div>
-      </div>
-  
-      <div class="form-group row">
-      <label for="date" class="col-sm-2 col-form-label">Date:</label>
+ <div class="row">
+  <form>
+   <div class="col-md-6">
+    
+      <!-- <div class="col-sm-8" style="padding-top: 10px;"> -->
+    <div class="form-group row" >
+      <label for="customerName" class="col-sm-2 ">Customer Name:</label>
       <div class="col-sm-6">
       <input
         required
+        minlength="3"
+        maxlength="10"
         class="form-control"
         ngModel
-        name="date"
-        #date="ngModel"
-        id="date"
-        type="date">
+        name="customerName"
+        #customerName="ngModel"
+        id="customerName"
+        type="text">
         <div
-          class="alert alert-danger"
-          *ngIf="date.touched && !date.valid">
-           Date is Required
-        </div></div>
-    </div>
-  
-      <div class="form-group row">
-      <label for="billNumber" class="col-sm-2 col-form-label">Bill Number:</label>
+        class="alert alert-danger"
+        *ngIf="customerName.touched && !customerName.valid">
+        Customer Name is Required
+         </div></div>
+        </div>
+    
+        <div class="form-group row">
+        <label for="date" class="col-sm-2 col-form-label">Date:</label>
         <div class="col-sm-6">
-      <input
-      required
-      class="form-control"
-      ngModel
-      name="billNumber"
-      #billNumber="ngModel"
-      id="billNumber"
-      type="number">
-      <div
-      class="alert alert-danger"
-      *ngIf="billNumber.touched && !billNumber.valid">
-       Bill Number is Required
-      </div></div>
-    </div>
-      <div class="form-group row">
-      <label for="customerPlace" class="col-sm-2 col-form-label">Customer Place</label>
-      <div class="col-sm-6">
-      <input
-      required
-      class="form-control"
-      ngModel
-      name="customerPlace"
-      #customerPlace="ngModel"
-      id="customerPlace"
-      type="text">
-      <div
-      class="alert alert-danger"
-      *ngIf="customerPlace.touched && !customerPlace.valid">
-       Customer Place is Required
-      </div></div></div>
-  
-      <div class="form-group row">
-      <label for="numberOfAcres" class="col-sm-2 col-form-label">Number of acres</label>
-      <div class="col-sm-6">
-      <input
-      required
-      class="form-control"
-      ngModel
-      name="numberOfAcres"
-      #numberOfAcres="ngModel"
-      id="numberOfAcres"
-      type="number">
-      <div
-      class="alert alert-danger"
-      *ngIf="numberOfAcres.touched && !numberOfAcres.valid">
-       Number Of Acres is Required
-      </div> </div>
-    </div>
+        <input
+          required
+          class="form-control"
+          ngModel
+          name="date"
+          #date="ngModel"
+          id="date"
+          type="date">
+          <div
+            class="alert alert-danger"
+            *ngIf="date.touched && !date.valid">
+             Date is Required
+          </div></div>
+      </div>
+    
+        <div class="form-group row">
+        <label for="billNumber" class="col-sm-2 col-form-label">Bill Number:</label>
+          <div class="col-sm-6">
+        <input
+        required
+        class="form-control"
+        ngModel
+        name="billNumber"
+        #billNumber="ngModel"
+        id="billNumber"
+        type="number">
+        <div
+        class="alert alert-danger"
+        *ngIf="billNumber.touched && !billNumber.valid">
+         Bill Number is Required
+        </div></div>
+      </div>
+        <div class="form-group row">
+        <label for="customerPlace" class="col-sm-2 col-form-label">Customer Place</label>
+        <div class="col-sm-6">
+        <input
+        required
+        class="form-control"
+        ngModel
+        name="customerPlace"
+        #customerPlace="ngModel"
+        id="customerPlace"
+        type="text">
+        <div
+        class="alert alert-danger"
+        *ngIf="customerPlace.touched && !customerPlace.valid">
+         Customer Place is Required
+        </div></div></div>
+
+        <div class="form-group row">
+          <label for="numberOfAcre" class="col-sm-2 col-form-label">Number of acres</label>
+          <div class="col-sm-6">
+          <input
+          required
+          class="form-control"
+          ngModel
+          name="numberOfAcre"
+          #numberOfAcre="ngModel"
+          id="numberOfAcre"
+          type="number">
+          <div
+          class="alert alert-danger"
+          *ngIf="numberOfAcre.touched && !numberOfAcre.valid">
+           Number Of Acres is Required
+          </div> </div>
+        </div>
+
+   </div>
+   <div class="col-md-6">
+ 
   
       <div class="form-group row">
       <label for="costPerAcre" class="col-sm-2 col-form-label">Cost Per Acres</label>
@@ -109,20 +115,20 @@
       </div>  </div> </div>
   
       <div class="form-group row">
-      <label for="amount" class="col-sm-2 col-form-label">Amount</label>
+      <label for="totalAmount" class="col-sm-2 col-form-label"> Total Amount</label>
       <div class="col-sm-6">
       <input
       required
       class="form-control"
       ngModel
       name="amount"
-      #amount="ngModel"
-      id="amount"
-      type="number"><div *ngIf="!amount.value">{{numberOfAcres.value * costPerAcre.value}}</div>
+      #totalAmount="ngModel"
+      id="totalAmount"
+      type="number"><div *ngIf="!totalAmount.value">{{numberOfAcre.value * costPerAcre.value}}</div>
       <div
       class="alert alert-danger"
-      *ngIf="amount.touched && !amount.valid">
-       Amount is Required
+      *ngIf="totalAmount.touched && !totalAmount.valid">
+       Total Amount is Required
       </div> </div> </div>
   
       <div class="form-group row">
@@ -152,7 +158,7 @@
       name="balance"
       #balance="ngModel"
       id="balance"
-      type="number"><div *ngIf="!balance.value">{{amount.value - advance.value}}</div>
+      type="number"><div *ngIf="!balance.value">{{totalAmount.value - advance.value}}</div>
       <div
       class="alert alert-danger"
       *ngIf="balance.touched && !balance.valid">
@@ -161,27 +167,29 @@
     </div>
   
       <div class="form-group row">
-      <label for="totalAmount" class="col-sm-2 col-form-label">Total Amount</label>
+      <label for="amountGiven" class="col-sm-2 col-form-label">Amount Given</label>
       <div class="col-sm-6">
       <input
       required
       class="form-control"
       ngModel
-      name="totalAmount"
-      #totalAmount="ngModel"
-      id="totalAmount"
+      name="amountGiven"
+      #amountGiven="ngModel"
+      id="amountGiven"
       type="number">
   
       <div
       class="alert alert-danger"
-      *ngIf="totalAmount.touched && !totalAmount.valid">
-      Total Amount is Required
+      *ngIf="amountGiven.touched && !amountGiven.valid">
+     Amount  given is Required
   
       </div> </div></div>
   
-      
+   </div>
+
       <div class="form-group col-sm-2">
-      <button class="btn btn-primary" >Save</button>
+      <button class="btn btn-primary" (click)="addIncome(date.value,customerName.value,customerPlace.value,billNumber.value
+      ,numberOfAcre.value,costPerAcre.value,totalAmount.value,advance.value,balance.value,amountGiven.value)">Save</button>
       </div>
       <div class="form-group col-sm-2">
         <button class="btn btn-primary" >Details</button>
@@ -192,8 +200,6 @@
       <div class="form-group col">
         <button class="btn btn-primary" >Delete</button>
       </div>
-  
-    </div>
   </form>
 
   

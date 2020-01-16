@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { RicePlantService } from './../../rice-plant.service';
+import { Component} from '@angular/core';
+import {Router} from '@angular/router'
+
 
 @Component({
   selector: 'rice-income',
@@ -6,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rice-income.component.css']
 })
 export class RiceIncomeComponent  {
+  
+  constructor(private incomeDetails:RicePlantService ,private router:Router){}
 
- 
 
-  submit(f){
-    console.log(f)
-  }
+  addIncome(date,customerName,customerPlace, billNumber,numberOfAcre,costPerAcre,totalAmount,advance,balance,amountGiven){
+    this.incomeDetails.addIncome(date,customerName,customerPlace, billNumber,numberOfAcre,
+      costPerAcre,totalAmount,advance,balance,amountGiven).subscribe(()=>{
+        this.router.navigate([''])
+
+    })
+}
 }
