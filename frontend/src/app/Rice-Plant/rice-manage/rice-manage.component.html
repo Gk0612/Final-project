@@ -1,15 +1,5 @@
 
 
-<ul class="list-group">
-    
-    <li class="list-group-item list-group-item-primary">All Details</li>
-    <li class="list-group-item list-group-item-info">Income : 230000</li>
-    <li class="list-group-item list-group-item-success">Expense  : 10000</li>
-    <li class="list-group-item list-group-item-danger">Profit : 12345</li>
-    <li class="list-group-item list-group-item-dark">Balance : 12345</li>
-  
-  </ul>
-
 <div class="container">
     <h1>Details of full customers </h1>
 </div>
@@ -29,6 +19,8 @@
             <th>Advance</th>
             <th>Balance</th>
             <th>Amount Given</th>
+            <th></th>
+            <th></th>
             
         </tr>
     </thead>
@@ -47,6 +39,12 @@
             <td>{{income.advance}}</td>
             <td>{{income.balance}}</td>
             <td>{{income.amountGiven}}</td>
+            <td>
+                <a routerLink="" class="btn btn-primary">Edit</a>
+            </td>
+            <td>
+                <a routerLink="" class="btn btn-primary">Delete</a>
+            </td>
         </tr>
     </tbody>
 </table>

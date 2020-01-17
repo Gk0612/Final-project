@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RiceProfitComponent } from './rice-profit.component';
+import { RiceManageComponent } from './rice-manage.component';
 
-describe('RiceProfitComponent', () => {
-  let component: RiceProfitComponent;
-  let fixture: ComponentFixture<RiceProfitComponent>;
+describe('RiceManageComponent', () => {
+  let component: RiceManageComponent;
+  let fixture: ComponentFixture<RiceManageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RiceProfitComponent ]
+      declarations: [ RiceManageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RiceProfitComponent);
+    fixture = TestBed.createComponent(RiceManageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

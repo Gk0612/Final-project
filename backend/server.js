@@ -37,16 +37,17 @@ app.get('/incomedetails',(req,res)=>{
         if(err)        
           console.log(err)
         else
-         res.send(income)
+         res.json(income)
     })
 })
 
-app.get('/expensedetails',(req,res)=>{
-    Expense.find((err,expense)=>{
-        if(err)
-          console.log(err)
-        else
-         res.send(expense)
+app.get('/incomedetails/:id',(req,res)=>{
+    Income.findById(req.params.id,(err,income)=>{
+        if(err)        
+        console.log(err)
+      else
+       res.json(income)
+
     })
 })
 
@@ -63,6 +64,50 @@ app.post('/incomedetails/add',(req,res)=>{
 })
 
 
+app.post('/incomedetails/update/:id',(req,res)=>{
+    Income.findByIdAndUpdate(req.params.id,(err,income)=>{
+        if(!income)
+          return next(new Error("Could not load document"));
+        else{
+          let income = new Income(req.body)
+          income.save()
+        .then(income=>{
+            res.status(200).json({'income':'Updated Successfully'})
+        })
+        .catch(err=>{
+            res.status(400).send("Failed to create")
+        })
+    }
+    })
+})
+
+app.get('/incomedetails/delete/:id',(req,res)=>{
+    Income.findByIdAndRemove({_id:req.params.id},(err,income)=>{
+        if(err)
+            res.json(err)
+        else
+            res.json("Removed successfully")
+    })
+})
+
+app.get('/expensedetails',(req,res)=>{
+    Expense.find((err,expense)=>{
+        if(err)
+          console.log(err)
+        else
+         res.send(expense)
+    })
+})
+
+app.get('/expensedetails/:id',(req,res)=>{
+    Expense.findById(req.params.id,(err,expense)=>{
+        if(err)        
+        console.log(err)
+      else
+       res.json(expense)
+
+    })            
+})
 
 app.post('/expensedetails/add',(req,res)=>{
     console.log(req.body)           
@@ -76,7 +121,31 @@ app.post('/expensedetails/add',(req,res)=>{
         })
 })
 
+app.post('/expensedetails/update/:id',(req,res)=>{
+    Expense.findByIdAndUpdate(req.params.id,(err,expense)=>{
+        if(!income)
+          return next(new Error("Could not load document"));
+        else{
+          let expense= new Expense(req.body)
+          expense.save()
+        .then(expense=>{
+            res.status(200).json({'expense':'Updated Successfully'})
+        })
+        .catch(err=>{
+            res.status(400).send("Failed to create")
+        })
+    }
+    })
+})
 
+app.get('/expensedetails/delete/:id',(req,res)=>{
+    Expense.findByIdAndRemove({_id:req.params.id},(err,expense)=>{
+        if(err)
+            res.json(err)
+        else
+            res.json("Removed successfully")
+    })
+})
 
 
 app.listen(3000,()=>console.log("Running on 3000"));

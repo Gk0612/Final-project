@@ -23,9 +23,7 @@ import { RiceIncomeComponent } from './Rice-Plant/rice-income/rice-income.compon
 import { BalerIncomeComponent } from './Baler/baler-income/baler-income.component';
 import { RiceExpenseComponent } from './Rice-Plant/rice-expense/rice-expense.component';
 import { BalerExpenseComponent } from './Baler/baler-expense/baler-expense.component';
-import { RiceProfitComponent } from './Rice-Plant/rice-profit/rice-profit.component';
 import { BalerProfitComponent } from './Baler/baler-profit/baler-profit.component';
-import { RiceBalanceComponent } from './Rice-Plant/rice-balance/rice-balance.component';
 import { BalerBalanceComponent } from './Baler/baler-balance/baler-balance.component';
 import { SugarBalanceComponent } from './Sugarcane/sugar-balance/sugar-balance.component';
 import { SugarIncomeComponent } from './Sugarcane/sugar-income/sugar-income.component';
@@ -33,6 +31,7 @@ import { SugarExpenseComponent } from './Sugarcane/sugar-expense/sugar-expense.c
 import { SugarProfitComponent } from './Sugarcane/sugar-profit/sugar-profit.component';
 import { RiceDetailsComponent } from './Rice-Plant/rice-details/rice-details.component'
 import {RicePlantService} from './rice-plant.service';
+import { RiceManageComponent } from './Rice-Plant/rice-manage/rice-manage.component';
 
 
 const routes:Routes = [
@@ -40,8 +39,7 @@ const routes:Routes = [
   {  path:'login', component:LoginComponent},
   {  path:'riceincome' , component:RiceIncomeComponent},
   {  path:'riceexpense' , component:RiceExpenseComponent},
-  {  path:'ricebalance' , component:RiceBalanceComponent},
-  {  path:'riceprofit' , component:RiceProfitComponent},
+  {path:'ricemanage', component:RiceManageComponent},
   { path:'ricedetails',component:RiceDetailsComponent},
   {  path:'sugarincome' , component:SugarIncomeComponent},
   {  path:'sugarexpense' , component:SugarExpenseComponent},
@@ -59,15 +57,14 @@ const routes:Routes = [
     BalerIncomeComponent,
     RiceExpenseComponent,
     BalerExpenseComponent,
-    RiceProfitComponent,
     BalerProfitComponent,
-    RiceBalanceComponent,
     BalerBalanceComponent,
     SugarBalanceComponent,
     SugarIncomeComponent,
     SugarExpenseComponent,
     SugarProfitComponent,
     RiceDetailsComponent,
+    RiceManageComponent,
    
   ],
   imports: [
