@@ -10,14 +10,13 @@ import {Router} from '@angular/router'
 })
 export class RiceIncomeComponent  {
   
-  constructor(private incomeDetails:RicePlantService ,private router:Router){}
+  constructor(private details:RicePlantService ,private router:Router){}
 
 
   addIncome(date,customerName,customerPlace, billNumber,numberOfAcre,costPerAcre,totalAmount,advance,balance,amountGiven){
-    this.incomeDetails.addIncome(date,customerName,customerPlace, billNumber,numberOfAcre,
+    this.details.addIncome(date,customerName,customerPlace, billNumber,numberOfAcre,
       costPerAcre,totalAmount,advance,balance,amountGiven).subscribe(()=>{
         this.router.navigate([''])
-
     })
 }
 }

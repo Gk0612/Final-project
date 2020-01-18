@@ -18,7 +18,7 @@ export class RiceExpenseComponent implements OnInit {
     date,petrol,diesel,service,spare,foodCost,totalAmount){
       this.incomeDetails.addExpense(driverName,managerName,driverSalary,managerSalary,
         date,petrol,diesel,service,spare,foodCost,totalAmount).subscribe(()=>{
-          
+          this.router.navigate(['']);
         })
 }
 }

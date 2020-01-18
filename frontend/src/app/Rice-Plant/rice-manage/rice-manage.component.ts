@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router} from '@angular/router'
+import { Router,ActivatedRoute} from '@angular/router'
 import {RicePlantService} from '../../rice-plant.service'
 
 @Component({
@@ -10,9 +10,15 @@ import {RicePlantService} from '../../rice-plant.service'
 export class RiceManageComponent implements OnInit {
   incomeDetails;
   expenseDetails;
-  constructor(private details:RicePlantService,private router:Router) { }
+  incomeId;
+  expenseId;
+  constructor(private details:RicePlantService,private router:Router, private route:ActivatedRoute) { }
 
   ngOnInit() {
+    
+      this.incomeId=this.router.url;
+      console.log(this.incomeId)
+
     this.fetchIncomes();
     this.fetchExpense();
   }
@@ -21,7 +27,6 @@ export class RiceManageComponent implements OnInit {
     this.details.getIncomeDetails().subscribe((data:any) =>{
             this.incomeDetails=data;
             console.log("Data requested....");
-            console.log(this.incomeDetails[0]);
     })
    }
 
@@ -29,8 +34,35 @@ export class RiceManageComponent implements OnInit {
     this.details.getExpenseDetails().subscribe((data:any) =>{
             this.expenseDetails=data;
             console.log("Data requested....");
-            console.log(this.expenseDetails[0]);
     })
    }
+
+
+   editIncome(id){
+    // Navigate to Another route
+    this.details.getIncomeDetailsById(id).subscribe(()=>{
+     this.router.navigate([`/riceincome/update/${id}`]);
+    })
+   // this.router.navigate([`/edit/${id}`]);
+  }
+
+  deleteIncome(id){
+    this.details.deleteIncomeDetailsById(id).subscribe(()=>{
+      this.fetchIncomes();
+    })
+
+  }
+
+  deleteExpense(id){
+    this.details.deleteExpenseDetailsById(id).subscribe(()=>{
+      this.fetchExpense();
+    })
+
+  }
+
+  getId(){
+  
+  }
+
 
 }

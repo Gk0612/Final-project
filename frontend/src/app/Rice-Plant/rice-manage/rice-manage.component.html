@@ -43,7 +43,7 @@
                 <a routerLink="" class="btn btn-primary">Edit</a>
             </td>
             <td>
-                <a routerLink="" class="btn btn-primary">Delete</a>
+                <a routerLink="/ricemanage" class="btn btn-primary" (click)="deleteIncome(income._id)">Delete</a>
             </td>
         </tr>
     </tbody>
@@ -69,6 +69,8 @@
             <th>Spare</th>
             <th>Food Cost</th>
             <th>Total Amount</th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
 
@@ -87,6 +89,12 @@
             <td>{{expense.spare}}</td>
             <td>{{expense.foodCost}}</td>
             <td>{{expense.totalAmount}}</td>
+            <td>
+                <a routerLink="" class="btn btn-primary">Edit</a>
+            </td>
+            <td>
+                <a routerLink="/ricemanage" class="btn btn-primary" (click)="deleteExpense(expense._id)">Delete</a>
+            </td>
         </tr>
     </tbody>
 </table>

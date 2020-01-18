@@ -37,10 +37,11 @@ import { RiceManageComponent } from './Rice-Plant/rice-manage/rice-manage.compon
 const routes:Routes = [
   {  path:'' , component:HomeComponent},
   {  path:'login', component:LoginComponent},
+  {  path:'main',component:SidenavbarComponent},
   {  path:'riceincome' , component:RiceIncomeComponent},
   {  path:'riceexpense' , component:RiceExpenseComponent},
-  {path:'ricemanage', component:RiceManageComponent},
-  { path:'ricedetails',component:RiceDetailsComponent},
+  {  path:'ricemanage', component:RiceManageComponent},
+  {  path:'ricedetails',component:RiceDetailsComponent},
   {  path:'sugarincome' , component:SugarIncomeComponent},
   {  path:'sugarexpense' , component:SugarExpenseComponent},
   {  path:'balerincome' , component:BalerIncomeComponent},
