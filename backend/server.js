@@ -21,8 +21,9 @@ app.use(cors(corsObj));
 
 app.use(bodyparser.json());
 
-
-mongoose.connect('mongodb://localhost:27017/incomedetails', {useNewUrlParser: true });
+dbUri='mongodb+srv://Madimago:Madimago2k20@agri123-au23m.mongodb.net/Agriculture?retryWrites=true&w=majority'
+mongoose.connect(dbUri, {useNewUrlParser: true }).then()
+ .catch(err=>console.log(err))
 
 
 const connection=mongoose.connection;
@@ -35,7 +36,7 @@ app.get('/incomedetails',(req,res)=>{
     console.log(req.body)     
     Income.find((err,income)=>{
         if(err)        
-          console.log(err)
+          console.log(err)   
         else
          res.json(income)
     })
