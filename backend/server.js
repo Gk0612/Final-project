@@ -18,13 +18,16 @@ const corsObj={
 }
 
 app.use(cors(corsObj));
-
+ 
 app.use(bodyparser.json());
 
-dbUri='mongodb+srv://Madimago:Madimago2k20@agri123-au23m.mongodb.net/Agriculture?retryWrites=true&w=majority'
-mongoose.connect(dbUri, {useNewUrlParser: true }).then()
- .catch(err=>console.log(err))
-
+const cloudDbUri='mongodb+srv://Project8:Password*123pm@project8-wl0d8.mongodb.net/test?retryWrites=true&w=majority'
+const localDbUri='mongodb://localhost:27017/incomedetails'
+// mongoose.connect(cloudDbUri), {useNewUrlParser: true }).then(()=>{
+//     console.log("Mongodb connected");
+// })
+//  .catch(err=>console.log(err))
+mongoose.connect(localDbUri)
 
 const connection=mongoose.connection;
 
