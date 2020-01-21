@@ -21,7 +21,7 @@ app.use(cors(corsObj));
  
 app.use(bodyparser.json());
 
-const cloudDbUri='mongodb+srv://Project8:Password*123pm@project8-wl0d8.mongodb.net/test?retryWrites=true&w=majority'
+// const cloudDbUri='mongodb+srv://Project8:Password*123pm@project8-wl0d8.mongodb.net/test?retryWrites=true&w=majority'
 const localDbUri='mongodb://localhost:27017/incomedetails'
 // mongoose.connect(cloudDbUri), {useNewUrlParser: true }).then(()=>{
 //     console.log("Mongodb connected");
