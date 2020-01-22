@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-sugar-income',
+  selector: 'sugar-income',
   templateUrl: './sugar-income.component.html',
   styleUrls: ['./sugar-income.component.css']
 })

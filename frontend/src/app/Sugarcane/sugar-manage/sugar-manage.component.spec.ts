@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BalerBalanceComponent } from './baler-balance.component';
+import { SugarManageComponent } from './sugar-manage.component';
 
-describe('BalerBalanceComponent', () => {
-  let component: BalerBalanceComponent;
-  let fixture: ComponentFixture<BalerBalanceComponent>;
+describe('SugarManageComponent', () => {
+  let component: SugarManageComponent;
+  let fixture: ComponentFixture<SugarManageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BalerBalanceComponent ]
+      declarations: [ SugarManageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BalerBalanceComponent);
+    fixture = TestBed.createComponent(SugarManageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

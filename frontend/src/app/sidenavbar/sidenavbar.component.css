@@ -4,7 +4,7 @@
 
 .sidenav {
   width: 225px;
-  box-shadow: 3px 0 6px rgba(0, 0,0,1);
+  /* box-shadow: 3px 0 6px rgba(0, 0,0,1); */
   /* background-image: url(../../assets/agriculture-backyard-blur-close-up.jpeg);
   background-attachment:fixed;
     background-repeat: no-repeat;
@@ -27,11 +27,7 @@
 }
 
 .expansion{
-   background-image:url(../../assets/barley.webp); 
-    background-attachment:fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+
 }
 .title{
   color:#2B2B52;

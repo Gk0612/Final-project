@@ -23,15 +23,15 @@ import { RiceIncomeComponent } from './Rice-Plant/rice-income/rice-income.compon
 import { BalerIncomeComponent } from './Baler/baler-income/baler-income.component';
 import { RiceExpenseComponent } from './Rice-Plant/rice-expense/rice-expense.component';
 import { BalerExpenseComponent } from './Baler/baler-expense/baler-expense.component';
-import { BalerProfitComponent } from './Baler/baler-profit/baler-profit.component';
-import { BalerBalanceComponent } from './Baler/baler-balance/baler-balance.component';
-import { SugarBalanceComponent } from './Sugarcane/sugar-balance/sugar-balance.component';
 import { SugarIncomeComponent } from './Sugarcane/sugar-income/sugar-income.component';
 import { SugarExpenseComponent } from './Sugarcane/sugar-expense/sugar-expense.component';
-import { SugarProfitComponent } from './Sugarcane/sugar-profit/sugar-profit.component';
 import { RiceDetailsComponent } from './Rice-Plant/rice-details/rice-details.component'
 import {RicePlantService} from './rice-plant.service';
 import { RiceManageComponent } from './Rice-Plant/rice-manage/rice-manage.component';
+import { SugarManageComponent } from './Sugarcane/sugar-manage/sugar-manage.component';
+import { SugarDetailsComponent } from './Sugarcane/sugar-details/sugar-details.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MaterialModule } from './material/material.module';
 
 
 const routes:Routes = [
@@ -58,14 +58,12 @@ const routes:Routes = [
     BalerIncomeComponent,
     RiceExpenseComponent,
     BalerExpenseComponent,
-    BalerProfitComponent,
-    BalerBalanceComponent,
-    SugarBalanceComponent,
     SugarIncomeComponent,
     SugarExpenseComponent,
-    SugarProfitComponent,
     RiceDetailsComponent,
     RiceManageComponent,
+    SugarManageComponent,
+    SugarDetailsComponent,
    
   ],
   imports: [
@@ -79,11 +77,13 @@ const routes:Routes = [
     RouterModule.forRoot(routes),
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatFormFieldModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
     MatListModule,
+    MaterialModule
   ],
   providers: [
     RicePlantService

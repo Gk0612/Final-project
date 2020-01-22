@@ -1,4 +1,4 @@
-<form #f="ngForm">
+<!-- <form #f="ngForm">
     <div class="col-sm-8 row mb-3">
         <div class="form-group row">
             <label for="date" class="col-sm-2 col-form-label">Date:</label>
@@ -103,4 +103,104 @@
 
 
     </div>
-</form>
+</form> -->
+
+<div style="padding: 10px">
+    <!-- applicant card div start -->
+    <div>
+        <mat-card>
+            <mat-card-title>
+                Expense Details
+            </mat-card-title>
+            <mat-card-content>
+                <mat-form-field>
+                    <mat-label>
+                        Manager Name
+                    </mat-label>
+                    <input matInput [(ngModel)]="managerName" required>
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>
+                       Driver Name
+                    </mat-label>
+                    <input matInput [(ngModel)]="driverName" required>
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>
+                        Date 
+                    </mat-label>
+                    <input matInput  [(ngModel)]="date"  required [matDatepicker]="dobDatePicker">
+                    <mat-datepicker-toggle [for]="dobDatePicker" matSuffix></mat-datepicker-toggle>
+                    <mat-datepicker #dobDatePicker></mat-datepicker>
+                </mat-form-field>
+                <br>
+              
+              
+                <mat-form-field>
+                    <mat-label>
+                       Manager Salary
+                    </mat-label>
+                    <input matInput [(ngModel)]="managerSalary" required>
+                </mat-form-field>
+                <br>
+  
+                <mat-form-field>
+                    <mat-label>
+                        Driver Salary
+                    </mat-label>
+                    <input matInput [(ngModel)]="driverSalary" required>
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>
+                   Petrol
+                    </mat-label>
+                    <input matInput [(ngModel)]="petrol" required>
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>
+                       Diesel
+                    </mat-label>
+                    <input matInput [(ngModel)]="diesel" required>
+                </mat-form-field>
+                <br>
+              <mat-form-field>
+                  <mat-label>
+                     Service
+                  </mat-label>
+                  <input matInput [(ngModel)]="service" required>
+              </mat-form-field>
+              <br>
+              <mat-form-field>
+                  <mat-label>
+                      Spare
+                  </mat-label>
+                  <input matInput [(ngModel)]="spare" required>
+              </mat-form-field>
+              <br>
+              <mat-form-field>
+                <mat-label>
+                    Food Cost
+                </mat-label>
+                <input matInput [(ngModel)]="foodCost" required>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <mat-label>
+                    Total Amount
+                </mat-label>
+                <input matInput [(ngModel)]="totalAmount" required>
+            </mat-form-field>
+            <br>
+  
+              <div class="button">
+                  <button mat-raised-button color="primary" >Save</button>
+              </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+   
+  </div>
