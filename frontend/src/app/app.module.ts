@@ -17,6 +17,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
 import {RouterModule,Routes} from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { RiceIncomeComponent } from './Rice-Plant/rice-income/rice-income.component';
@@ -44,6 +45,7 @@ const routes:Routes = [
   {  path:'ricedetails',component:RiceDetailsComponent},
   {  path:'sugarincome' , component:SugarIncomeComponent},
   {  path:'sugarexpense' , component:SugarExpenseComponent},
+  {  path:'sugardetails',component:SugarDetailsComponent},
   {  path:'balerincome' , component:BalerIncomeComponent},
   {  path:'balerexpense' , component:BalerExpenseComponent},
 ]
@@ -81,6 +83,7 @@ const routes:Routes = [
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
+    MatTableModule,  
     MatIconModule,
     MatListModule,
     MaterialModule
