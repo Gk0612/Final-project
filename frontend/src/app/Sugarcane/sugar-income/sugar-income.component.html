@@ -3,11 +3,22 @@
 <div style="padding: 10px">
   <!-- applicant card div start -->
   <div>
+   
+    
       <mat-card>
           <mat-card-title>
               Income Details
           </mat-card-title>
           <mat-card-content>
+            <mat-form-field>
+                <mat-label>
+                    Date 
+                </mat-label>
+                <input matInput [(ngModel)]="date" required  [matDatepicker]="dobDatePicker">
+                <mat-datepicker-toggle [for]="dobDatePicker" matSuffix></mat-datepicker-toggle>
+                <mat-datepicker #dobDatePicker></mat-datepicker>
+            </mat-form-field>
+            <br>
               <mat-form-field>
                   <mat-label>
                       Customer Name
@@ -19,69 +30,67 @@
                   <mat-label>
                       Customer Place
                   </mat-label>
-                  <input matInput [(ngModel)]="customerPlace">
+                  <input matInput [(ngModel)]="customerPlace" required>
               </mat-form-field>
               <br>
-              <mat-form-field>
-                  <mat-label>
-                      Date 
-                  </mat-label>
-                  <input matInput [(ngModel)]="date" [matDatepicker]="dobDatePicker">
-                  <mat-datepicker-toggle [for]="dobDatePicker" matSuffix></mat-datepicker-toggle>
-                  <mat-datepicker #dobDatePicker></mat-datepicker>
-              </mat-form-field>
-              <br>
+              
             
             
               <mat-form-field>
                   <mat-label>
-                      Bill Number
+                      Ryot Number
                   </mat-label>
-                  <input matInput [(ngModel)]="billNumber">
+                  <input matInput [(ngModel)]="ryotNumber" required>
               </mat-form-field>
               <br>
 
               <mat-form-field>
                   <mat-label>
-                      Number Of Acres
+                      Plot Number 
                   </mat-label>
-                  <input matInput [(ngModel)]="numberOfAcres">
+                  <input matInput [(ngModel)]="plotNumber" required>
               </mat-form-field>
               <br>
               <mat-form-field>
                   <mat-label>
-                      Cost Per Acre
+                      Cost Per Ton
                   </mat-label>
-                  <input matInput [(ngModel)]="costPerAcre">
+                  <input matInput [(ngModel)]="costPerTon" required>
               </mat-form-field>
               <br>
               <mat-form-field>
                   <mat-label>
-                      Total Amount
+                      Total Tons
                   </mat-label>
-                  <input matInput [(ngModel)]="totalAmount">
+                  <input matInput [(ngModel)]="totalTons" required>
               </mat-form-field>
               <br>
-
+              <mat-form-field>
+                <mat-label>
+                    Amount 
+                </mat-label>
+                <input matInput [(ngModel)]="amount" required>
+            </mat-form-field>
+            <br>
               <mat-form-field>
                 <mat-label>
                     Advance
                 </mat-label>
-                <input matInput [(ngModel)]="advance">
+                <input matInput [(ngModel)]="advance" required>
             </mat-form-field>
             <br>
             <mat-form-field>
                 <mat-label>
                     Balance
                 </mat-label>
-                <input matInput [(ngModel)]="balance">
+                <input matInput [(ngModel)]="balance" >
             </mat-form-field>
             <br>
             <mat-form-field>
                 <mat-label>
                     Amount Given
                 </mat-label>
-                <input matInput [(ngModel)]="amountGiven">
+                <input matInput [(ngModel)]="amountGiven" required>
             </mat-form-field>
             <br>
 

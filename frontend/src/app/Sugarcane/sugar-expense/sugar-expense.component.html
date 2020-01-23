@@ -115,9 +115,11 @@
             <mat-card-content>
                 <mat-form-field>
                     <mat-label>
-                        Manager Name
+                        Date 
                     </mat-label>
-                    <input matInput [(ngModel)]="managerName" required>
+                    <input matInput  [(ngModel)]="date"  required [matDatepicker]="dobDatePicker">
+                    <mat-datepicker-toggle [for]="dobDatePicker" matSuffix></mat-datepicker-toggle>
+                    <mat-datepicker #dobDatePicker></mat-datepicker>
                 </mat-form-field>
                 <br>
                 <mat-form-field>
@@ -129,15 +131,20 @@
                 <br>
                 <mat-form-field>
                     <mat-label>
-                        Date 
+                        Driver Salary
                     </mat-label>
-                    <input matInput  [(ngModel)]="date"  required [matDatepicker]="dobDatePicker">
-                    <mat-datepicker-toggle [for]="dobDatePicker" matSuffix></mat-datepicker-toggle>
-                    <mat-datepicker #dobDatePicker></mat-datepicker>
+                    <input matInput [(ngModel)]="driverSalary" required>
                 </mat-form-field>
                 <br>
-              
-              
+                <mat-form-field>
+                    <mat-label>
+                        Manager Name
+                    </mat-label>
+                    <input matInput [(ngModel)]="managerName" required>
+                </mat-form-field>
+                <br>
+               
+    
                 <mat-form-field>
                     <mat-label>
                        Manager Salary
@@ -146,13 +153,7 @@
                 </mat-form-field>
                 <br>
   
-                <mat-form-field>
-                    <mat-label>
-                        Driver Salary
-                    </mat-label>
-                    <input matInput [(ngModel)]="driverSalary" required>
-                </mat-form-field>
-                <br>
+                
                 <mat-form-field>
                     <mat-label>
                    Petrol
