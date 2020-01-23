@@ -2,7 +2,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 
-.form-control.ng-touched.ng-invalid{
+/* .form-control.ng-touched.ng-invalid{
   border: 2px red solid;
 }
 
@@ -17,4 +17,9 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+
+
+.mat-sidenav{width:280px;padding:15px;}
+.mat-drawer{background-color:#310DA5}
+.main-content{padding: 40px;}

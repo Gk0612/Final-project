@@ -1,4 +1,4 @@
-<mat-sidenav-container class="sidenav-container" >
+<!-- <mat-sidenav-container class="sidenav-container" >
   <mat-sidenav #drawer class="sidenav" fixedInViewport 
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
@@ -78,6 +78,98 @@
   </mat-sidenav>
   <mat-sidenav-content class="content">
    
-    <!-- Add Content Here -->
+     Add Content Here 
+  </mat-sidenav-content>
+</mat-sidenav-container>
+ -->
+
+
+
+
+
+<mat-sidenav-container fullscreen > 
+  <mat-sidenav #sidenav opened mode="side" position="start">
+      
+      <mat-toolbar>
+          Machines
+        </mat-toolbar>
+      
+      
+      <mat-expansion-panel class="expansion">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="title">
+            Rice Transplanter
+          </mat-panel-title>   
+        </mat-expansion-panel-header>
+       
+        <mat-nav-list>
+          <a mat-list-item routerLink="/riceincome">Income</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-list-item routerLink="/riceexpense">Expense</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-list-item routerLink="/ricedetails">All details</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-list-item routerLink="/ricemanage">Manage income & Expense</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+      
+      <mat-expansion-panel class="expansion">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="title">
+            Sugar  cane Harvester
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+       
+        <mat-nav-list>
+          <a mat-list-item routerLink="/sugarincome">Income</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-list-item routerLink="/sugarexpense">Expense</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-list-item routerLink="/sugardetails">All details</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-list-item routerLink="/sugarmanage">Manage income & Expense</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+         
+    
+      <mat-expansion-panel class="expansion">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="title">
+            Baler
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        
+        <mat-nav-list>
+          <a mat-list-item routerLink="/balerincome">Income</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-list-item routerLink="/balerexpense">Expense</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-list-item routerLink="/balerdetails">All details</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-list-item routerLink="/balermanage">Manage income & Expense</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+    
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <mat-toolbar color="primary">
+          <button mat-icon-button (click)="sidenav.toggle()">
+              <mat-icon>menu</mat-icon>
+          </button>
+          My App</mat-toolbar>
+          <div>
+            
+          </div>
+      
+      
   </mat-sidenav-content>
 </mat-sidenav-container>

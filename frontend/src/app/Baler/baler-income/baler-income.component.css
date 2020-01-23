@@ -1,0 +1,23 @@
+
+
+    .sidenav-container {
+        height: 100%;
+      }
+      
+      .sidenav {
+        width: 225px;
+      }
+      
+      
+      .name{
+        
+        color: darkred;
+      }
+      
+      .expansion{
+      color: aquamarine;
+      }
+      .title{
+        color:#2B2B52;
+        text-decoration: double;
+      }

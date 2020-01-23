@@ -1,19 +1,28 @@
- 
-  <mat-sidenav-container class="tp-container"    >
-    <mat-sidenav mode="side" opened style="padding:5px;" >
+
+   <!-- <mat-sidenav-container class="tp-container">
+    <mat-sidenav mode="side" opened  >
       <sidenavbar></sidenavbar>
     </mat-sidenav>
     
     <mat-sidenav-content style="padding:10px;">
-      <div class="container router">
+     
         <router-outlet></router-outlet> 
-      </div>
+      
     </mat-sidenav-content>
     </mat-sidenav-container>
-  
-    
+   -->
+
+   <div class="main-content" *ngIf="url == '/'">
+    <router-outlet></router-outlet>
+</div>
+
+<div class="main-content" *ngIf="url !== '/'">
+  <sidenavbar></sidenavbar>
+</div>
 
 
+<!-- 
+ <router-outlet></router-outlet>  -->
 
 
 
