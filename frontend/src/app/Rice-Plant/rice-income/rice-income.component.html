@@ -190,79 +190,75 @@
       <button class="btn btn-primary" (click)="addIncome(date.value,customerName.value,customerPlace.value,billNumber.value
       ,numberOfAcre.value,costPerAcre.value,totalAmount.value,advance.value,balance.value,amountGiven.value)">Save</button>
       </div>
-      <div class="form-group col-sm-2">
-        <button class="btn btn-primary" >Details</button>
-      </div>
-      <div class="form-group col-sm-2">
-        <button class="btn btn-primary" >Edit</button>
-      </div>
-      <div class="form-group col">
-        <button class="btn btn-primary" >Delete</button> 
-      </div>
-  </form>
- -->
-
+     
+    </form>
+ 
+</div> -->
 
 
 <div style="padding: 10px">
-  <!-- applicant card div start -->
+ 
   <div>
       <mat-card>
           <mat-card-title>
               Income Details
           </mat-card-title>
           <mat-card-content>
+
+            <form  [formGroup]="createForm" class="create-form">
             <mat-form-field>
               <mat-label>
                   Date 
               </mat-label>
-              <input matInput [(ngModel)]="date" required [matDatepicker]="dobDatePicker">
+              <input matInput formControlName='date' #date required [matDatepicker]="dobDatePicker">
               <mat-datepicker-toggle [for]="dobDatePicker" matSuffix></mat-datepicker-toggle>
               <mat-datepicker #dobDatePicker></mat-datepicker>
           </mat-form-field>
           <br>
-          <mat-form-field>
-            <mat-label>
-                Bill Number
-            </mat-label>
-            <input matInput [(ngModel)]="billNumber" required>
-        </mat-form-field>
-        <br>
+       
         
               <mat-form-field>
                   <mat-label>
                       Customer Name
                   </mat-label>
-                  <input matInput [(ngModel)]="customerName" required>
+                  <input matInput formControlName="customerName"  #customerName required>
               </mat-form-field>
               <br>
               <mat-form-field>
                   <mat-label>
                       Customer Place
                   </mat-label>
-                  <input matInput [(ngModel)]="customerPlace" required>
+                  <input matInput formControlName="customerPlace" #customerPlace required>
               </mat-form-field>
               <br>
+
+              <mat-form-field>
+                <mat-label>
+                    Bill Number
+                </mat-label>
+                <input matInput formControlName="billNumber"  #billNumber required>
+            </mat-form-field>
+            <br>
       
               <mat-form-field>
                   <mat-label>
                       Number Of Acres
                   </mat-label>
-                  <input matInput [(ngModel)]="numberOfAcres" required>
+                  <input matInput formControlName="numberOfAcres" #numberOfAcres required>
               </mat-form-field>
               <br>
               <mat-form-field>
                   <mat-label>
                       Cost Per Acre
                   </mat-label>
-                  <input matInput [(ngModel)]="costPerAcre" required>
+                  <input matInput formControlName="costPerAcre" #costPerAcre required>
               </mat-form-field>
               <br>
               <mat-form-field>
                   <mat-label>
                       Total Amount
                   </mat-label>
-                  <input matInput [(ngModel)]="totalAmount" required>
+                  <input matInput formControlName="totalAmount" #totalAmount required>
               </mat-form-field>
               <br>
 
@@ -270,27 +266,29 @@
                 <mat-label>
                     Advance
                 </mat-label>
-                <input matInput [(ngModel)]="advance" required>
+                <input matInput [(ngModel)]="advance" #advance required>
             </mat-form-field>
             <br>
             <mat-form-field>
                 <mat-label>
                     Balance
                 </mat-label>
-                <input matInput [(ngModel)]="balance" required >
+                <input matInput formControlName="balance" #balance required >
             </mat-form-field>
             <br>
             <mat-form-field>
                 <mat-label>
                     Amount Given
                 </mat-label>
-                <input matInput [(ngModel)]="amountGiven" required>
+                <input matInput formControlName="amountGiven" #amountGiven required>
             </mat-form-field>
             <br>
 
             <div class="button">
-                <button mat-raised-button color="primary" >Save</button>
+                <button mat-raised-button color="primary"   (click)="addIncome(date.value,customerName.value,customerPlace.value,billNumber.value
+                ,numberOfAcre.value,costPerAcre.value,totalAmount.value,advance.value,balance.value,amountGiven.value)" >Save</button>
             </div>
+            </form>
           </mat-card-content>
       </mat-card>
   </div>

@@ -1,7 +1,7 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTreeModule} from '@angular/material/tree';
@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavbarComponent } from './sidenavbar/sidenavbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -32,7 +33,7 @@ import {RicePlantService} from './rice-plant.service';
 import { RiceManageComponent } from './Rice-Plant/rice-manage/rice-manage.component';
 import { SugarManageComponent } from './Sugarcane/sugar-manage/sugar-manage.component';
 import { SugarDetailsComponent } from './Sugarcane/sugar-details/sugar-details.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
+
 import { MaterialModule } from './material/material.module';
 
 
@@ -75,6 +76,7 @@ const routes:Routes = [
     FormsModule,
     MatSidenavModule,
     MatTreeModule,
+    ReactiveFormsModule,
     CommonModule,
     MatExpansionModule,
     RouterModule.forRoot(routes),

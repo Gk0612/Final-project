@@ -38,13 +38,6 @@ export class RiceManageComponent implements OnInit {
    }
 
 
-   editIncome(id){
-    // Navigate to Another route
-    this.details.getIncomeDetailsById(id).subscribe(()=>{
-     this.router.navigate([`/riceincome/update/${id}`]);
-    })
-   // this.router.navigate([`/edit/${id}`]);
-  }
 
   deleteIncome(id){
     this.details.deleteIncomeDetailsById(id).subscribe(()=>{
@@ -60,9 +53,7 @@ export class RiceManageComponent implements OnInit {
 
   }
 
-  getId(){
   
-  }
 
 
 }
