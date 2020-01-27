@@ -27,7 +27,7 @@ const localDbUri='mongodb://localhost:27017/incomedetails'
 //     console.log("Mongodb connected");
 // })
 //  .catch(err=>console.log(err))
-mongoose.connect(localDbUri)
+mongoose.connect(localDbUri, { useNewUrlParser: true })
 
 const connection=mongoose.connection;
 
